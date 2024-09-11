@@ -1,15 +1,6 @@
 const express = require('express');
-const router = express.Router();
+const axios = require('axios');
 const path = require('path');
-
-// Route pour la page d'accueil
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/index.html'));  // Si tu utilises un fichier HTML
-  // Ou si tu utilises EJS:
-  // res.render('index');  // Si tu utilises EJS comme moteur de rendu
-});
-
-module.exports = router;
 
 const app = express();
 const PORT = 3000;
@@ -40,9 +31,3 @@ app.get('/api/boitiers', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
-
-router.get('/', (req, res) => {
-    console.log('Route / atteinte');
-    res.sendFile(path.join(__dirname, '../views/index.html'));
-  });
-  
