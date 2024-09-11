@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
-const routes = require('./routes/index');
+const routes = require('./routes/index'); // Assure-toi que './routes/index' exporte une fonction Router
 const errorHandler = require('./middlewares/errorHandler');
-require('dotenv').config(); // Charger les variables d'environnement
+require('dotenv').config();
 
 const app = express();
 
@@ -10,12 +10,11 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Utiliser les routes
-app.use('/', routes);
+app.use('/', routes); // Assure-toi que routes est un middleware fonctionnel
 
-// Utiliser le middleware de gestion des erreurs
+// Middleware pour gérer les erreurs
 app.use(errorHandler);
 
-// Démarrer le serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur le port ${PORT}`);
