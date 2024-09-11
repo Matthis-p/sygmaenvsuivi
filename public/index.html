@@ -59,23 +59,35 @@
     </header>
 
     <main>
-        <div class="table-container" id="tableContainer">
-            <table id="boitiersTable">
-                <thead>
-                    <tr>
-                        <th>ID Boîtier</th>
-                        <th>Client</th>
-                        <th>Production Journalière (kWh)</th>
-                        <th>État</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Les données des boîtiers seront insérées ici d:f) -->
-                </tbody>
-            </table>
-        </div>
-    </main>
+          <!-- Loader avec logo et animation -->
+  <div id="loader-wrapper">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo de l'entreprise" class="logo">
+    </div>
+    <div class="loader"></div>
+  </div>
 
+  <!-- Contenu de la page, masqué au départ -->
+  <div id="content" style="display: none;">
+   
+    <div class="table-container" id="tableContainer">
+        <table id="boitiersTable">
+            <thead>
+                <tr>
+                    <th>ID Boîtier</th>
+                    <th>Client</th>
+                    <th>Production Journalière (kWh)</th>
+                    <th>État</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les données des boîtiers seront insérées ici d:f) -->
+            </tbody>
+        </table>
+    </div>
+</main>
+    <!-- Tout le reste du contenu que tu avais déjà -->
+  </div>
     <script src="app.js"></script>
 </body>
 </html>

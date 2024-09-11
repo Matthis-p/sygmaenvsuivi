@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Clé API et URL de l'API Emphase (à ajuster selon l'API réelle)
 const API_KEY = '4d6a55354f546b774d513d3d0a';  // Remplace par la clé API réelle
-const BASE_URL = 'https://api.emphase.com/v1/boitiers';  // Remplace par l'URL réelle
+const BASE_URL = 'https://api.enphaseenergy.com/api/v2';  // Remplace par l'URL réelle
 
 // Servir les fichiers statiques dans le dossier public
 app.use(express.static(path.join(__dirname, 'public')));

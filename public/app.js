@@ -147,3 +147,18 @@ function stopReportSchedule() {
 
 // Appeler les données au chargement
 fetchBoitiersData();
+
+window.addEventListener('load', function() {
+    // Masquer le loader après le chargement de la page
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    const content = document.getElementById('content');
+    
+    // Masquer le loader et afficher le contenu après un léger délai
+    setTimeout(() => {
+      loaderWrapper.style.display = 'none'; // Masquer le loader
+      content.style.display = 'block'; // Afficher le contenu principal
+      content.style.opacity = '1'; // Apparition fluide du contenu
+    }, 1000); // Délai de 1 seconde pour plus de fluidité
+  });
+  
+  
